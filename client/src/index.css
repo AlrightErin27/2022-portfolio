@@ -1,0 +1,17 @@
+* {
+}
+.two-form-cont {
+  text-align: center;
+}
+.entry-form {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.eform-section {
+  background-color: yellow;
+}
+.eform-btn {
+  background-color: tan;
+}
