@@ -8,6 +8,9 @@ import {
 // ~~~~⭐️~~~~~~~~~~🌜~~~~ 🌞 Components 🌞 ~~~~🌛~~~~~~~~~~⭐️~~~~ //
 import Login from "./components/Login";
 import Home from "./components/Home";
+import Arcade from "./components/Arcade";
+import Resume from "./components/Resume";
+import Projects from "./components/Projects";
 import Logout from "./components/Logout";
 // ~~~~⭐️~~~~~~~~~~🌜~~~~ 🌞 ~~~~~~~~~~ 🌞 ~~~~🌛~~~~~~~~~~⭐️~~~~ //
 
@@ -26,19 +29,39 @@ function App() {
             <Login />
           </Route>
           {""}
+
+          {/*  // ~~~🍉 Route to Resume 🍉~~~ //  */}
+          <Route path="/resume">
+            <Resume />
+          </Route>
+          {""}
+
           {/*  // ~~~🍌 Route to Home 🍌~~~ //  */}
           <Route path="/home">
             <Home />
           </Route>
           {""}
-          {/*  // ~~~🍎 Route to Logout 🍎~~~ //  */}
 
+          {/*  // ~~~🍑 Route to Arcade 🍑~~~ //  */}
+          <Route path="/arcade">
+            <Arcade />
+          </Route>
+          {""}
+
+          {/*  // ~~~🥝 Route to Projects 🥝~~~ //  */}
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          {""}
+
+          {/*  // ~~~🍎 Route to Logout 🍎~~~ //  */}
           <Route path="/logout">
             <Logout />
           </Route>
           {""}
+
           {/*  // ~~~🍍 Redirect to Login 🍍~~~ //  */}
-          <Redirect to="/login"></Redirect>
+          <Redirect to="/home"></Redirect>
           {""}
         </Switch>
       </Router>

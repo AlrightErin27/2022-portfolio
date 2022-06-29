@@ -1,5 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&display=swap");
+/* font-family: "Josefin Slab", serif; */
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+/* font-family: 'Poiret One', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+/* font-family: 'Yeseva One', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+/* font-family: 'Rock Salt', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+/* font-family: 'Unica One', cursive; */
+
 * {
+  background-color: rgb(59, 59, 63);
+  color: rgba(255, 255, 238, 0.899);
+  font-size: 1.15rem;
+  font-family: "Unica One", cursive;
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~~    HOME    ~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~  NAV BAR   ~~~~~~~~~~~~~~~~~~~~~ */
+nav {
+  border: 1px solid red;
+  text-align: center;
+}
+.nav-link {
+  padding: 0 1rem 0 1rem;
+  cursor: pointer;
+}
+.nav-link:hover {
+  color: red;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~ AUTH FORMS ~~~~~~~~~~~~~~~~~~~~~ */
 .two-form-cont {
   text-align: center;
 }
