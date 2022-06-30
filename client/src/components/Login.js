@@ -15,6 +15,9 @@ function Login() {
   }
   function toggle() {
     setShowCreateAccount(!showCreateAccount);
+    showCreateAccount === true
+      ? history.push("/create_account")
+      : history.push("/login");
   }
   console.log("New account? ", isNew);
   return (

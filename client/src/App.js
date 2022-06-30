@@ -12,6 +12,7 @@ import Arcade from "./components/Arcade";
 import Resume from "./components/Resume";
 import Projects from "./components/Projects";
 import Logout from "./components/Logout";
+import CreateAccount from "./components/CreateAccountForm";
 // ~~~~⭐️~~~~~~~~~~🌜~~~~ 🌞 ~~~~~~~~~~ 🌞 ~~~~🌛~~~~~~~~~~⭐️~~~~ //
 
 function App() {
@@ -57,6 +58,12 @@ function App() {
           {/*  // ~~~🍎 Route to Logout 🍎~~~ //  */}
           <Route path="/logout">
             <Logout />
+          </Route>
+          {""}
+
+          {/*  // ~~~🫐 Route to Create Account 🫐~~~ //  */}
+          <Route path="/create_account">
+            <CreateAccount />
           </Route>
           {""}
 

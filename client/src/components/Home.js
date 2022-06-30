@@ -9,9 +9,9 @@ function Home() {
       <div className="home">
         {/*~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~*/}
 
-        <p className="h-header">
+        <div className="h-header">
           Welcome to <p className="h-name">Erin Van Brunt's</p> Portfolio
-        </p>
+        </div>
         {/*~~~~~~~~~~~~~~~~ ABOUT  ~~~~~~~~~~~~~~~~*/}
 
         <p className="h-about">
