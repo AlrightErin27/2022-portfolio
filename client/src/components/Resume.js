@@ -1,5 +1,8 @@
 import React from "react";
 import NavBar from "./NavBar";
+import downloadIcon from "../imgs/dl.webp";
+import linkedIcon from "../imgs/linkedin.png";
+import githubIcon from "../imgs/github.png";
 
 function Resume() {
   return (
@@ -16,7 +19,12 @@ function Resume() {
                 download
                 className="r-download"
               >
-                Download Resume PDF
+                <img
+                  src={downloadIcon}
+                  alt="download icon"
+                  className="r-download-icon"
+                />
+                PDF
               </a>
             </div>
             Front-end Software Engineer
@@ -25,10 +33,19 @@ function Resume() {
               href="https://www.linkedin.com/in/erin-van-brunt/"
               className="r-link"
             >
-              linkedin.com/in/erin-van-brunt
+              <img
+                src={linkedIcon}
+                alt="www.linkedin.com/in/erin-van-brunt/"
+                className="r-linkedin-icon"
+              />
+              Linked In
             </a>
-            •
             <a href="https://github.com/AlrightErin27" className="r-link">
+              <img
+                src={githubIcon}
+                alt="www.linkedin.com/in/erin-van-brunt/"
+                className="r-github-icon"
+              />
               github.com/AlrightErin27
             </a>
           </div>
@@ -69,7 +86,7 @@ function Resume() {
           <p className="r-subheader">
             Mask Designer / Layout Engineer (2011-2015)
           </p>
-          <p className="r-edu-local">Analog Devices | San Jose, CA</p>
+          <p className="r-edu-local">Analog Devices, San Jose, CA</p>
           <p className="r-text">
             • Yielded analog & digital mask designs for integrated circuits in
             mobile phones. <br />
