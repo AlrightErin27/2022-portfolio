@@ -29,6 +29,62 @@ label {
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~    HOME    ~~~~~~~~~~~~~~~~~~~~~ */
+.h-header {
+  color: rgba(255, 255, 255, 0.724);
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0rem;
+}
+.h-name {
+  font-family: "Rock Salt", cursive;
+  font-size: 2rem;
+}
+.h-lower-pg {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.h-logo-cont {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+.h-about {
+  text-align: center;
+  margin-top: -4rem;
+}
+.home label {
+  font-family: "Josefin Slab", serif;
+}
+.home ul {
+  width: 25vw;
+  position: absolute;
+}
+.home li {
+  background-color: transparent;
+  display: inline;
+}
+.rotate {
+  animation: rotation 20s;
+  background-color: transparent;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.linear {
+  animation-timing-function: linear;
+}
+.infinite {
+  animation-iteration-count: infinite;
+}
 /* ~~~~~~~~~~~~~~~~~~~~~  NAV BAR   ~~~~~~~~~~~~~~~~~~~~~ */
 nav {
   border: 1px solid red;
