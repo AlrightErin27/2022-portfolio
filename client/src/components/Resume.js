@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
+import resumePDF from "../imgs/ResumeErinVanBrunt.pdf";
 import downloadIcon from "../imgs/dl.webp";
 import linkedIcon from "../imgs/linkedin.png";
 import githubIcon from "../imgs/github.png";
@@ -14,11 +15,7 @@ function Resume() {
             {/*~~~~~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~~~~ */}
             <p className="r-name">Erin Van Brunt</p>
             <div>
-              <a
-                href="../ResumeErinVanBrunt.pdf"
-                download
-                className="r-download"
-              >
+              <a href={resumePDF} download className="r-download">
                 <img
                   src={downloadIcon}
                   alt="download icon"
