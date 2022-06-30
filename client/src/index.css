@@ -15,6 +15,18 @@
   font-size: 1.15rem;
   font-family: "Unica One", cursive;
 }
+button {
+  cursor: pointer;
+}
+input {
+  height: 20px;
+}
+label {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  width: 10vw;
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~    HOME    ~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~  NAV BAR   ~~~~~~~~~~~~~~~~~~~~~ */
@@ -32,16 +44,87 @@ nav {
 /* ~~~~~~~~~~~~~~~~~~~~~ AUTH FORMS ~~~~~~~~~~~~~~~~~~~~~ */
 .two-form-cont {
   text-align: center;
-}
-.entry-form {
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+  margin: 0.2rem;
+}
 .eform-section {
-  background-color: yellow;
+  width: 20vw;
+  margin: 0.2rem;
+  text-align: left;
 }
 .eform-btn {
-  background-color: tan;
+  margin: 0.2rem;
+}
+.eform-btn:hover {
+}
+/* ~~~~~~~~~~~~~~~~~~~~~   RESUME   ~~~~~~~~~~~~~~~~~~~~~ */
+.resume-page {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+.resume {
+  padding: 0.5rem 7rem 7rem 7rem;
+  font-family: "Josefin Slab", serif;
+  background-color: rgba(255, 255, 255, 0.88);
+  width: 60vw;
+}
+.r-download {
+  color: red;
+  font-size: 1.4rem;
+}
+.r-top {
+  text-align: center;
+  font-family: inherit;
+  font-size: 1.5rem;
+}
+.r-name {
+  font-family: "Rock Salt", cursive;
+  font-size: 2rem;
+  margin: auto;
+}
+.r-link {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0 0.5rem 0 0.5rem;
+}
+.r-skills {
+  background-color: transparent;
+  font-family: inherit;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1.3rem;
+}
+.r-header {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.r-subheader {
+  font-size: 1.3rem;
+  background-color: transparent;
+  font-weight: bold;
+  color: rgb(0, 0, 123);
+}
+.r-edu-local {
+  background-color: transparent;
+  font-family: inherit;
+  margin: -0.4rem;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+.r-text {
+  background-color: transparent;
+  font-family: inherit;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }

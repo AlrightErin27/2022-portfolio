@@ -52,10 +52,9 @@ function LoginForm({ handleForms, setIsNew }) {
         />
       </div>
 
-      <div className="eform-btn">
-        {/*  // ~~~🥨 Submit Button 🥨~~~ //  */}
-        <button type="submit">Enter</button>
-      </div>
+      <div className="eform-btn"></div>
+      {/*  // ~~~🥨 Submit Button 🥨~~~ //  */}
+      <button type="submit">Enter</button>
     </form>
   );
 }
