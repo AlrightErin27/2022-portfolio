@@ -8,14 +8,11 @@ function LoginForm({ handleForms, setIsNew }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    const reEntryUser = {
-      username,
-      email,
-      password,
-    };
-    // console.log("Re-entry User Object:", reEntryUser);
-    setIsNew(false);
-    handleForms(reEntryUser);
+    // const user = {
+    //   username,
+    //   email,
+    //   password,
+    // };
   }
 
   return (

@@ -6,5 +6,25 @@
       "addWords": true,
       "scope": "workspace"
     }
-  }
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#e283be",
+    "activityBar.activeBorder": "#d6edb2",
+    "activityBar.background": "#e283be",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#d6edb2",
+    "activityBarBadge.foreground": "#15202b",
+    "sash.hoverBorder": "#e283be",
+    "statusBar.background": "#d959a9",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#cf3093",
+    "statusBarItem.remoteBackground": "#d959a9",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#d959a9",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#d959a999",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#d959a9"
 }

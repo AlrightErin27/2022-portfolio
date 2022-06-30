@@ -54,7 +54,7 @@ label {
 }
 .h-about {
   text-align: center;
-  margin-top: -4rem;
+  margin-top: -1.5rem;
 }
 .home label {
   font-family: "Josefin Slab", serif;
@@ -88,15 +88,18 @@ label {
 }
 /* ~~~~~~~~~~~~~~~~~~~~~  NAV BAR   ~~~~~~~~~~~~~~~~~~~~~ */
 nav {
-  border: 1px solid red;
+  border: 3px solid rgb(255, 85, 0);
   text-align: center;
+  background: rgb(255, 241, 246);
 }
 .nav-link {
   padding: 0 1rem 0 1rem;
   cursor: pointer;
+  background: transparent;
+  color: rgb(255, 85, 0);
 }
 .nav-link:hover {
-  color: red;
+  color: rgb(155, 52, 0);
 }
 /* ~~~~~~~~~~~~~~~~~~~~~ AUTH FORMS ~~~~~~~~~~~~~~~~~~~~~ */
 .two-form-cont {
