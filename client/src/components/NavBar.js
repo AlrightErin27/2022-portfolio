@@ -20,7 +20,7 @@ function NavBar() {
       </NavLink>
 
       <NavLink
-        to="/login"
+        to="/arcade"
         style={{ textDecoration: "none" }}
         className="nav-link"
       >

@@ -47,7 +47,7 @@ function App() {
           {""}
           {/*  // ~~~🍏 Route to Login 🍏~~~ //  */}
           <Route path="/login">
-            <Login setUser={setUser} />
+            <Login />
           </Route>
           {""}
 
@@ -65,7 +65,7 @@ function App() {
 
           {/*  // ~~~🍑 Route to Arcade 🍑~~~ //  */}
           <Route path="/arcade">
-            <Arcade />
+            <Arcade user={user} setUser={setUser} />
           </Route>
           {""}
 
