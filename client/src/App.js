@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,9 +17,23 @@ import CreateAccount from "./components/CreateAccountForm";
 // ~~~~⭐️~~~~~~~~~~🌜~~~~ 🌞 ~~~~~~~~~~ 🌞 ~~~~🌛~~~~~~~~~~⭐️~~~~ //
 
 function App() {
-  // SET USER INTO STATE
+  const [user, setUser] = useState();
 
   // FETCH GET /me FROM SESSION CONTROLLER
+  useEffect(() => {
+    fetch("/me", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.id) {
+          setUser(data);
+        }
+      });
+  }, []);
 
   return (
     <>
@@ -27,7 +42,7 @@ function App() {
           {""}
           {/*  // ~~~🍏 Route to Login 🍏~~~ //  */}
           <Route path="/login">
-            <Login />
+            <Login setUser={setUser} />
           </Route>
           {""}
 

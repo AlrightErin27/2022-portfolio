@@ -13,7 +13,7 @@ function CreateAccountForm({ handleForms, setIsNew }) {
       email,
       password,
     };
-    // console.log("Created User Object:", createdUser);
+    console.log("Created User Object:", createdUser);
 
     handleForms(createdUser);
   }
