@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
   Redirect,
+  useHistory,
 } from "react-router-dom";
 
 // ~~~~⭐️~~~~~~~~~~🌜~~~~ 🌞 Components 🌞 ~~~~🌛~~~~~~~~~~⭐️~~~~ //
@@ -18,6 +19,7 @@ import CreateAccount from "./components/CreateAccountForm";
 
 function App() {
   const [user, setUser] = useState();
+  const history = useHistory();
 
   // FETCH GET /me FROM SESSION CONTROLLER
   useEffect(() => {
@@ -34,6 +36,9 @@ function App() {
         }
       });
   }, []);
+  user
+    ? console.log("CURRENTLY LOGGED IN:", user.name)
+    : console.log("Not logged in.");
 
   return (
     <>
