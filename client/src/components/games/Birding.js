@@ -11,19 +11,43 @@ import bird5 from "../../game-imgs/bird-game/yellow-oriole.png";
 import bird6 from "../../game-imgs/bird-game/bohemian-waxing-bird.png";
 import bird7 from "../../game-imgs/bird-game/spotted-woodpecker.png";
 
-function Birding() {
+function Birding({ user }) {
   const [playing, setPlaying] = useState(false);
   const [finished, setFinished] = useState(true);
   const [birds, setBirds] = useState([]);
+  const [score, setScore] = useState([]);
 
   useEffect(() => {
-    const mixBirds = [bird0, bird1, bird2, bird3, bird4, bird5, bird6, bird7]
+    const mixBirds = [
+      { img: bird0, num: 0, name: "Eagle Owl" },
+      { img: bird1, num: 1, name: "Falco Vespertinus" },
+      { img: bird2, num: 2, name: "Great Cormorant" },
+      { img: bird3, num: 3, name: "Honey Buzzard" },
+      { img: bird4, num: 4, name: "Red Crossbills" },
+      { img: bird5, num: 5, name: "Yellow Oriole" },
+      { img: bird6, num: 6, name: "Bohemian Waxing Bird" },
+      { img: bird7, num: 7, name: "Spotted Woodpecker" },
+    ]
       .map((value) => ({ value, sort: Math.random() }))
       .sort((a, b) => a.sort - b.sort)
       .map(({ value }) => value);
 
     setBirds(mixBirds);
   }, []);
+
+  function onSight(seenBird) {
+    if (score.includes(seenBird)) {
+      console.log("Already seen species.");
+    } else {
+      setScore([...score, seenBird]);
+    }
+  }
+
+  const startGame = () => {
+    setScore([]);
+    setPlaying(true);
+    setFinished(false);
+  };
 
   const endGame = () => {
     console.log("GAME IS OVER.");
@@ -37,19 +61,24 @@ function Birding() {
       <div className="b-header">
         {/* ------------ TIMER ------------ */}
         {playing ? (
-          <Countdown date={Date.now() + 10000} onComplete={endGame}>
-            <p>0</p>
-          </Countdown>
+          <Countdown date={Date.now() + 10000000} onComplete={endGame} />
         ) : null}
       </div>
 
       {/* ------------ START BUTTON ------------ */}
-      <button onClick={() => setPlaying(!playing)}>
-        {playing ? "Stop" : "Start"}
-      </button>
+
+      {playing ? (
+        <button onClick={endGame}>Stop</button>
+      ) : (
+        <button onClick={startGame}>Start</button>
+      )}
 
       {/* ------------ GAME GRID ------------ */}
-      {playing ? <Grid birds={birds} /> : <Instructions />}
+      {playing ? (
+        <Grid birds={birds} onSight={onSight} />
+      ) : (
+        <Instructions score={score} user={user} />
+      )}
     </div>
   );
 }
