@@ -270,5 +270,5 @@ nav {
 .bird-img {
   width: 14.5rem;
   height: 19rem;
-  cursor: pointer;
+  cursor: url("./game-imgs/bird-game/binoculars.png"), pointer;
 }
