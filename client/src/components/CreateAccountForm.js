@@ -46,6 +46,7 @@ function CreateAccountForm({ setUser, setNewAccount }) {
             });
           } else {
             res.json().then((json) => setError(json.error, error));
+            console.log(success, "Did not post new user to backend");
             alert("Incorrect Input");
           }
         });

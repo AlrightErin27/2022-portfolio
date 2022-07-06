@@ -13,7 +13,7 @@ import Arcade from "./components/Arcade";
 import Resume from "./components/Resume";
 import Projects from "./components/Projects";
 import Logout from "./components/Logout";
-// import CreateAccount from "./components/CreateAccountForm";
+import Birding from "./components/games/Birding";
 // ~~~~⭐️~~~~~~~~~~🌜~~~~ 🌞 ~~~~~~~~~~ 🌞 ~~~~🌛~~~~~~~~~~⭐️~~~~ //
 
 function App() {
@@ -79,11 +79,11 @@ function App() {
           </Route>
           {""}
 
-          {/*  // ~~~🫐 Route to Create Account 🫐~~~ //  */}
-          {/* <Route path="/create-account">
-            <CreateAccount />
+          {/*  // ~~~🫐 Route to GAME: Birding 🫐~~~ //  */}
+          <Route path="/birding">
+            <Birding />
           </Route>
-          {""} */}
+          {""}
 
           {/*  // ~~~🍍 Redirect to Login 🍍~~~ //  */}
           <Redirect to="/home"></Redirect>

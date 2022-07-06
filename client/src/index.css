@@ -129,7 +129,6 @@ nav {
   z-index: 99999;
   position: absolute;
 }
-
 /* ~~~~~~~~~~~~~~~~~~~~~   RESUME   ~~~~~~~~~~~~~~~~~~~~~ */
 .resume-page {
   display: flex;
@@ -234,4 +233,42 @@ nav {
   font-family: inherit;
   color: rgb(0, 0, 0);
   font-weight: bold;
+}
+/* ~~~~~~~~~~~~~~🎲~~~~~   GAMES   ~~~~~🎲~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~  BIRDING  ~~~~~~~~~~~~~~~~~~~~~ */
+.birding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.b-header {
+  position: absolute;
+  left: 2rem;
+}
+.b-header p {
+  margin: 0 2rem 0 2rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . ."
+    ". . . .";
+  /* width: 70vw;
+  height: 90vh; */
+}
+.square {
+  border: white 1px solid;
+  width: 14.5rem;
+  height: 19rem;
+}
+.square:hover {
+  background-color: rgba(184, 166, 214, 0.198);
+}
+.bird-img {
+  width: 14.5rem;
+  height: 19rem;
+  cursor: pointer;
 }
