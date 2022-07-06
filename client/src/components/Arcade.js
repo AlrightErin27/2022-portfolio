@@ -7,12 +7,17 @@ function Arcade({ user, setUser }) {
   return (
     <div>
       <NavBar />
-      {!user ? (
-        <LogIn setUser={setUser} />
-      ) : (
-        <ArcadeGames user={user} setUser={setUser} />
-      )}
+
+      <LogIn setUser={setUser} />
     </div>
+    // <div>
+    //   <NavBar />
+    //   {!user ? (
+    //     <LogIn setUser={setUser} />
+    //   ) : (
+    //     <ArcadeGames user={user} setUser={setUser} />
+    //   )}
+    // </div>
   );
 }
 

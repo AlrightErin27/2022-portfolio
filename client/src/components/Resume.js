@@ -4,6 +4,7 @@ import resumePDF from "../imgs/ResumeErinVanBrunt.pdf";
 import downloadIcon from "../imgs/dl.webp";
 import linkedIcon from "../imgs/linkedin.png";
 import githubIcon from "../imgs/github.png";
+import logo from "../imgs/erinlogo.png";
 
 function Resume() {
   return (
@@ -11,20 +12,22 @@ function Resume() {
       <NavBar />
       <div className="resume-page">
         <div className="resume">
+          <div className="r-fixed">
+            <img src={logo} alt="erinslogo" id="r-logo" />
+            <a href={resumePDF} download className="r-download">
+              <img
+                src={downloadIcon}
+                alt="download icon"
+                className="r-download-icon"
+              />
+              RESUME PDF
+            </a>
+          </div>
+
           <div className="r-top">
             {/*~~~~~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~~~~ */}
             <p className="r-name">Erin Van Brunt</p>
-            <div>
-              <a href={resumePDF} download className="r-download">
-                <img
-                  src={downloadIcon}
-                  alt="download icon"
-                  className="r-download-icon"
-                />
-                PDF
-              </a>
-            </div>
-            Front-end Software Engineer
+            <p id="r-job-title"> Front-end Software Engineer</p>
             <br /> Eugene, OR • (541) 543-4781 • erinmontybruce@gmail.com <br />
             <a
               href="https://www.linkedin.com/in/erin-van-brunt/"

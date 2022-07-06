@@ -93,7 +93,7 @@ nav {
   background: rgb(255, 241, 246);
 }
 .nav-link {
-  padding: 0 1rem 0 1rem;
+  padding: 0 4rem 0 4rem;
   cursor: pointer;
   background: transparent;
   color: rgb(255, 85, 0);
@@ -123,8 +123,13 @@ nav {
 .eform-btn {
   margin: 0.2rem;
 }
-.eform-btn:hover {
+.ca-cont {
+  display: flex;
+  justify-content: center;
+  z-index: 99999;
+  position: absolute;
 }
+
 /* ~~~~~~~~~~~~~~~~~~~~~   RESUME   ~~~~~~~~~~~~~~~~~~~~~ */
 .resume-page {
   display: flex;
@@ -132,16 +137,41 @@ nav {
   padding-top: 1rem;
   padding-bottom: 5rem;
 }
+.r-fixed {
+  position: fixed;
+  right: 12rem;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+#r-logo {
+  background: transparent;
+  height: 20vh;
+  animation: rotation 20s;
+}
+.r-download {
+  color: rgb(0, 17, 255);
+  font-size: 1.4rem;
+  background: rgba(255, 255, 255, 0.523);
+  padding: 12px;
+  border-radius: 12px;
+}
+.r-download:hover {
+  background-color: rgb(61, 61, 61);
+}
 .resume {
   padding: 0.5rem 7rem 7rem 7rem;
   font-family: "Josefin Slab", serif;
   background-color: rgba(255, 255, 255, 0.88);
   width: 60vw;
 }
-.r-download {
-  color: red;
-  font-size: 1.4rem;
+#r-job-title {
+  /* font-family: inherit; */
+  font-size: 2rem;
+  margin: auto;
+  color: orangered;
 }
+
 .r-download-icon {
   height: 1.3rem;
   filter: invert();
@@ -157,6 +187,7 @@ nav {
   font-family: "Rock Salt", cursive;
   font-size: 2rem;
   margin: auto;
+  color: white;
 }
 .r-link {
   font-family: inherit;

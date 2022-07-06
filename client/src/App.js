@@ -4,7 +4,6 @@ import {
   Switch,
   Route,
   Redirect,
-  useHistory,
 } from "react-router-dom";
 
 // ~~~~⭐️~~~~~~~~~~🌜~~~~ 🌞 Components 🌞 ~~~~🌛~~~~~~~~~~⭐️~~~~ //
@@ -14,12 +13,11 @@ import Arcade from "./components/Arcade";
 import Resume from "./components/Resume";
 import Projects from "./components/Projects";
 import Logout from "./components/Logout";
-import CreateAccount from "./components/CreateAccountForm";
+// import CreateAccount from "./components/CreateAccountForm";
 // ~~~~⭐️~~~~~~~~~~🌜~~~~ 🌞 ~~~~~~~~~~ 🌞 ~~~~🌛~~~~~~~~~~⭐️~~~~ //
 
 function App() {
   const [user, setUser] = useState();
-  const history = useHistory();
 
   // FETCH GET /me FROM SESSION CONTROLLER
   useEffect(() => {
@@ -82,10 +80,10 @@ function App() {
           {""}
 
           {/*  // ~~~🫐 Route to Create Account 🫐~~~ //  */}
-          <Route path="/create_account">
+          {/* <Route path="/create-account">
             <CreateAccount />
           </Route>
-          {""}
+          {""} */}
 
           {/*  // ~~~🍍 Redirect to Login 🍍~~~ //  */}
           <Redirect to="/home"></Redirect>

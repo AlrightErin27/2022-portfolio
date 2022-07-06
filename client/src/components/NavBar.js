@@ -11,13 +11,13 @@ function NavBar() {
         Home
       </NavLink>
 
-      <NavLink
+      {/* <NavLink
         to="/projects"
         style={{ textDecoration: "none" }}
         className="nav-link"
       >
         Projects
-      </NavLink>
+      </NavLink> */}
 
       <NavLink
         to="/arcade"
