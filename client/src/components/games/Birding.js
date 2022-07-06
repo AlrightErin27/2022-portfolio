@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Grid from "./Grid";
+import Instructions from "./Instructions";
 import Countdown from "react-countdown";
 import bird0 from "../../game-imgs/bird-game/eagle-owl.png";
 import bird1 from "../../game-imgs/bird-game/falco-vespertinus.png";
@@ -48,7 +49,7 @@ function Birding() {
       </button>
 
       {/* ------------ GAME GRID ------------ */}
-      {playing ? <Grid birds={birds} /> : "INSTRUCTIONS"}
+      {playing ? <Grid birds={birds} /> : <Instructions />}
     </div>
   );
 }

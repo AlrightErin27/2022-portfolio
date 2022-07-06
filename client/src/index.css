@@ -272,3 +272,17 @@ nav {
   height: 19rem;
   cursor: url("./game-imgs/bird-game/binoculars.png"), pointer;
 }
+/* BIRDING INSTRUCTIONS  */
+
+#in-watcher {
+  position: fixed;
+  right: 73%;
+  bottom: -4%;
+}
+#in-dove {
+  height: 18%;
+  position: absolute;
+  left: 40rem;
+  top: 7rem;
+  background: transparent;
+}
