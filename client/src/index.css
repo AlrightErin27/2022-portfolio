@@ -249,20 +249,23 @@ nav {
   margin: 0 2rem 0 2rem;
 }
 .grid {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
     ". . . ."
-    ". . . .";
+    ". . . ."; */
   /* width: 70vw;
   height: 90vh; */
 }
+.single-bird {
+  height: 32rem;
+}
 .square {
   border: white 1px solid;
-  width: 14.5rem;
-  height: 19rem;
+  /* width: 14.5rem;
+  height: 30rem; */
 }
 .square:hover {
   background-color: rgba(184, 166, 214, 0.198);

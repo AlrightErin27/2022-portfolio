@@ -6,7 +6,7 @@ function Instructions({ score, user }) {
   // if (!user) {
   //   alert("NOT LOGGED IN");
   // }
-  console.log(user);
+  // console.log(user);
   return (
     <div>
       To play try and catch as many birds as you can in 30 seconds.

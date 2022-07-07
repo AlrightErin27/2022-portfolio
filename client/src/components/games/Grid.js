@@ -1,16 +1,22 @@
-import React from "react";
+import Bird from "./Bird";
 
 function Grid({ birds, onSight }) {
-  function handleClick(e) {
+  function handleSelectBird(e) {
     // console.log(e.target.alt);
     onSight(e.target.alt);
   }
 
-  const renderGrid = birds.map((bird, idx) => {
+  const renderGrid = birds.map(({ speed, delay, img, name }, idx) => {
     return (
-      <div className="square" key={idx} onClick={(e) => handleClick(e)}>
-        <img src={bird.img} alt={bird.name} className="bird-img" />
-      </div>
+      <Bird
+        speed={speed}
+        delay={delay}
+        img={img}
+        name={name}
+        className="square"
+        key={idx}
+        handleSelectBird={handleSelectBird}
+      />
     );
   });
 

@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import gsap from "gsap";
+import Countdown from "react-countdown";
 import Grid from "./Grid";
 import Instructions from "./Instructions";
-import Countdown from "react-countdown";
+
 import bird0 from "../../game-imgs/bird-game/eagle-owl.png";
 import bird1 from "../../game-imgs/bird-game/falco-vespertinus.png";
 import bird2 from "../../game-imgs/bird-game/great-cormorant.png";
@@ -19,14 +21,54 @@ function Birding({ user }) {
 
   useEffect(() => {
     const mixBirds = [
-      { img: bird0, num: 0, name: "Eagle Owl" },
-      { img: bird1, num: 1, name: "Falco Vespertinus" },
-      { img: bird2, num: 2, name: "Great Cormorant" },
-      { img: bird3, num: 3, name: "Honey Buzzard" },
-      { img: bird4, num: 4, name: "Red Crossbills" },
-      { img: bird5, num: 5, name: "Yellow Oriole" },
-      { img: bird6, num: 6, name: "Bohemian Waxing Bird" },
-      { img: bird7, num: 7, name: "Spotted Woodpecker" },
+      {
+        img: bird0,
+        name: "Eagle Owl",
+        speed: gsap.utils.random(0.5, 1),
+        delay: gsap.utils.random(0.5, 4),
+      },
+      {
+        img: bird1,
+        name: "Falco Vespertinus",
+        speed: gsap.utils.random(0.5, 1),
+        delay: gsap.utils.random(0.5, 4),
+      },
+      {
+        img: bird2,
+        name: "Great Cormorant",
+        speed: gsap.utils.random(0.5, 1),
+        delay: gsap.utils.random(0.5, 4),
+      },
+      {
+        img: bird3,
+        name: "Honey Buzzard",
+        speed: gsap.utils.random(0.5, 1),
+        delay: gsap.utils.random(0.5, 4),
+      },
+      {
+        img: bird4,
+        name: "Red Crossbills",
+        speed: gsap.utils.random(0.5, 1),
+        delay: gsap.utils.random(0.5, 4),
+      },
+      {
+        img: bird5,
+        name: "Yellow Oriole",
+        speed: gsap.utils.random(0.5, 1),
+        delay: gsap.utils.random(0.5, 4),
+      },
+      {
+        img: bird6,
+        name: "Bohemian Waxing Bird",
+        speed: gsap.utils.random(0.5, 1),
+        delay: gsap.utils.random(0.5, 4),
+      },
+      {
+        img: bird7,
+        name: "Spotted Woodpecker",
+        speed: gsap.utils.random(0.5, 1),
+        delay: gsap.utils.random(0.5, 4),
+      },
     ]
       .map((value) => ({ value, sort: Math.random() }))
       .sort((a, b) => a.sort - b.sort)
@@ -45,12 +87,13 @@ function Birding({ user }) {
 
   const startGame = () => {
     setScore([]);
+
     setPlaying(true);
     setFinished(false);
   };
 
   const endGame = () => {
-    console.log("GAME IS OVER.");
+    console.log("GAME IS OVER.", finished);
     setPlaying(false);
     setFinished(true);
   };
