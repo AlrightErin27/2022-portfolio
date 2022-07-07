@@ -249,34 +249,31 @@ nav {
   margin: 0 2rem 0 2rem;
 }
 .grid {
-  /* display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
+  gap: 0px 0px 0px 0px;
   grid-template-areas:
     ". . . ."
-    ". . . ."; */
-  /* width: 70vw;
-  height: 90vh; */
-}
-.single-bird {
-  height: 32rem;
+    ". . . .";
 }
 .square {
   border: white 1px solid;
-  /* width: 14.5rem;
-  height: 30rem; */
-}
-.square:hover {
-  background-color: rgba(184, 166, 214, 0.198);
+  width: 14.5rem;
+  height: 19rem;
 }
 .bird-img {
   width: 14.5rem;
   height: 19rem;
   cursor: url("./game-imgs/bird-game/binoculars.png"), pointer;
 }
+.cover {
+  width: 14.5rem;
+  height: 19rem;
+  background-color: black;
+  z-index: 999;
+}
 /* BIRDING INSTRUCTIONS  */
-
 #in-watcher {
   position: fixed;
   right: 73%;
@@ -286,6 +283,6 @@ nav {
   height: 18%;
   position: absolute;
   left: 40rem;
-  top: 7rem;
+  top: 10rem;
   background: transparent;
 }

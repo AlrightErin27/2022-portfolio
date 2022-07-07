@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import gsap from "gsap";
+
 import Countdown from "react-countdown";
 import Grid from "./Grid";
 import Instructions from "./Instructions";
@@ -24,50 +24,34 @@ function Birding({ user }) {
       {
         img: bird0,
         name: "Eagle Owl",
-        speed: gsap.utils.random(0.5, 1),
-        delay: gsap.utils.random(0.5, 4),
       },
       {
         img: bird1,
         name: "Falco Vespertinus",
-        speed: gsap.utils.random(0.5, 1),
-        delay: gsap.utils.random(0.5, 4),
       },
       {
         img: bird2,
         name: "Great Cormorant",
-        speed: gsap.utils.random(0.5, 1),
-        delay: gsap.utils.random(0.5, 4),
       },
       {
         img: bird3,
         name: "Honey Buzzard",
-        speed: gsap.utils.random(0.5, 1),
-        delay: gsap.utils.random(0.5, 4),
       },
       {
         img: bird4,
         name: "Red Crossbills",
-        speed: gsap.utils.random(0.5, 1),
-        delay: gsap.utils.random(0.5, 4),
       },
       {
         img: bird5,
         name: "Yellow Oriole",
-        speed: gsap.utils.random(0.5, 1),
-        delay: gsap.utils.random(0.5, 4),
       },
       {
         img: bird6,
         name: "Bohemian Waxing Bird",
-        speed: gsap.utils.random(0.5, 1),
-        delay: gsap.utils.random(0.5, 4),
       },
       {
         img: bird7,
         name: "Spotted Woodpecker",
-        speed: gsap.utils.random(0.5, 1),
-        delay: gsap.utils.random(0.5, 4),
       },
     ]
       .map((value) => ({ value, sort: Math.random() }))
