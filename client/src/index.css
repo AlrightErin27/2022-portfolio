@@ -286,3 +286,12 @@ nav {
   top: 10rem;
   background: transparent;
 }
+/* // CANVAS CSS // */
+.canvas {
+  border: solid red 1px;
+  height: 35rem;
+  width: 60rem;
+}
+.c-bird {
+  width: 20%;
+}

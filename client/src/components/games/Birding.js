@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import Countdown from "react-countdown";
 import Grid from "./Grid";
+import Canvas from "./Canvas";
 import Instructions from "./Instructions";
 
 import bird0 from "../../game-imgs/bird-game/eagle-owl.png";
@@ -102,7 +103,8 @@ function Birding({ user }) {
 
       {/* ------------ GAME GRID ------------ */}
       {playing ? (
-        <Grid birds={birds} onSight={onSight} />
+        // <Grid birds={birds} onSight={onSight} />
+        <Canvas birds={birds} />
       ) : (
         <Instructions score={score} user={user} />
       )}
