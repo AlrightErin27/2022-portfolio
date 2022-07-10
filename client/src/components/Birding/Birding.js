@@ -89,21 +89,15 @@ export default function App() {
         }
         img {
           width: 10rem;
-       animation: fade 2s infinite;
+  
         animation: fadeinout .5s linear 1 forwards;
         }
-        @keyframes fade {
-            from {
-                transform: rotate(0deg);
-              }
-              to {
-                transform: rotate(359deg);
-              }
+
         }
         @keyframes fadeinout {
-            0% { opacity: 0; }
+            0% { opacity: 0, z-index: -1 }, 
             50% { opacity: 1; }
-            100% { opacity: 0; }
+            100% { opacity: 0, z-index: -1 }
           }
       `}
       </style>
