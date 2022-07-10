@@ -18,5 +18,6 @@
     "titleBar.inactiveBackground": "#c5426599",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#c54265"
+  "peacock.color": "#c54265",
+  "cSpell.words": ["gsap"]
 }
