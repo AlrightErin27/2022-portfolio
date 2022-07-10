@@ -263,10 +263,10 @@ nav {
   height: 19rem;
 }
 .bird-img {
-  width: 14.5rem;
-  height: 19rem;
   cursor: url("./game-imgs/bird-game/binoculars.png"), pointer;
+  max-width: 10%;
 }
+
 .cover {
   width: 14.5rem;
   height: 19rem;
@@ -274,6 +274,12 @@ nav {
   z-index: 999;
 }
 /* BIRDING INSTRUCTIONS  */
+.in-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #in-watcher {
   position: fixed;
   right: 73%;
@@ -285,13 +291,4 @@ nav {
   left: 40rem;
   top: 10rem;
   background: transparent;
-}
-/* // CANVAS CSS // */
-.canvas {
-  border: solid red 1px;
-  height: 35rem;
-  width: 60rem;
-}
-.c-bird {
-  width: 20%;
 }

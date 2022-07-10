@@ -1,4 +1,4 @@
-import Birding from "./games/Birding";
+import Birding from "./Birding/Birding";
 
 function ArcadeGames({ user, setUser }) {
   function handleLogOut() {
