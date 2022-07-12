@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 
-function TicTacToe() {
+function TicTacToe({ userName = "tempUser" }) {
   const [playerX, setPlayerX] = useState(true);
   const [count, setCount] = useState(9);
   const [isOver, setIsOver] = useState(false);
   const [xArr, setXArr] = useState([]);
   const [oArr, setOArr] = useState([]);
+  const [xScore, setXScore] = useState(0);
+  const [oScore, setOScore] = useState(0);
+  const history = useHistory();
 
   function handleClick(e) {
     e.preventDefault();
@@ -63,6 +67,7 @@ function TicTacToe() {
     ) {
       setIsOver(true);
       alert("X WINS");
+      setXScore(xScore + 1);
       setXArr([]);
       setOArr([]);
     } else if (
@@ -77,6 +82,7 @@ function TicTacToe() {
     ) {
       setIsOver(true);
       alert("O WINS");
+      setOScore(oScore + 1);
       setXArr([]);
       setOArr([]);
     }
@@ -95,14 +101,19 @@ function TicTacToe() {
     }
   }
 
-  // console.log("xARR ❌", xArr);
-  // console.log("oARR 🅾️", oArr);
-  // console.log("Is it over?", isOver);
-  // console.log("Is it X's turn", playerX);
+  function handleBack() {
+    history.push("./arcade");
+  }
 
   return (
     <div id="ttt" className="back">
-      <h1>Tic Tac React</h1>
+      <button onClick={handleBack}>Back</button>
+      <h1>Tic Tac Toe</h1>
+      <h3>User plays as X.</h3>
+      <p>
+        {userName} / X Score: {xScore}
+        <br />O Score: {oScore}
+      </p>
       <div className="ttt-grid">
         <div className="row" id="row1">
           <div

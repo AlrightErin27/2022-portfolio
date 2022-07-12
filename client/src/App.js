@@ -1,12 +1,8 @@
 import { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // ~~~~⭐️~~~~~~~~~~🌜~~~~ 🌞 Components 🌞 ~~~~🌛~~~~~~~~~~⭐️~~~~ //
+import NavBar from "./components/NavBar";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import Arcade from "./components/Arcade";
@@ -19,6 +15,7 @@ import TicTacToe from "./components/Tic-tac-toe/TicTacToe";
 
 function App() {
   const [user, setUser] = useState();
+  const [userName, setUserName] = useState("");
 
   // FETCH GET /me FROM SESSION CONTROLLER
   useEffect(() => {
@@ -35,13 +32,15 @@ function App() {
         }
       });
   }, []);
+
   user
-    ? console.log("CURRENTLY LOGGED IN:", user.name)
+    ? console.log("CURRENTLY LOGGED IN:", user.name) && setUserName(user.name)
     : console.log("Not logged in.");
 
   return (
     <>
       <Router>
+        <NavBar />
         <Switch>
           {""}
           {/*  // ~~~🍏 Route to Login 🍏~~~ //  */}
@@ -82,18 +81,14 @@ function App() {
 
           {/*  // ~~~🫐 Route to GAME: Birding 🫐~~~ //  */}
           <Route path="/birding">
-            <Birding />
+            <Birding user={user} />
           </Route>
           {""}
 
           {/*  // ~~~🫐 Route to GAME: TicTacToe 🫐~~~ //  */}
           <Route path="/tic-tac-toe">
-            <TicTacToe />
+            <TicTacToe userName={userName} />
           </Route>
-          {""}
-
-          {/*  // ~~~🍍 Redirect to Login 🍍~~~ //  */}
-          <Redirect to="/home"></Redirect>
           {""}
         </Switch>
       </Router>

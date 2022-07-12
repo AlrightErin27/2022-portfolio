@@ -1,5 +1,3 @@
-import React from "react";
-import NavBar from "./NavBar";
 import resumePDF from "../imgs/ResumeErinVanBrunt.pdf";
 import downloadIcon from "../imgs/dl.webp";
 import linkedIcon from "../imgs/linkedin.png";
@@ -9,7 +7,6 @@ import logo from "../imgs/erinlogo.png";
 function Resume() {
   return (
     <>
-      <NavBar />
       <div className="resume-page">
         <div className="resume">
           <div className="r-fixed">

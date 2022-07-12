@@ -19,6 +19,7 @@ mel =
     email: 'youreastar@megarecords.com',
     password: 'secret3',
   )
+erin = User.create!(name: 'erin', email: 'erin@erin.com', password: 'erin')
 
 pp 'Planting game seeds...'
 jp =

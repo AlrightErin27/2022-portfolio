@@ -1,11 +1,9 @@
 import React from "react";
-import NavBar from "./NavBar";
 import ErinLogo from "../imgs/erinlogo.png";
 
 function Home() {
   return (
     <>
-      <NavBar />
       <div className="home">
         {/*~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~*/}
 

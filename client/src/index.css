@@ -235,6 +235,14 @@ nav {
   font-weight: bold;
 }
 /* ~~~~~~~~~~~~~~🎲~~~~~   GAMES   ~~~~~🎲~~~~~~~~~~~~~~ */
+.ag-btn-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  column-gap: 3rem;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~  BIRDING  ~~~~~~~~~~~~~~~~~~~~~ */
 .birding {
   display: flex;
@@ -301,10 +309,12 @@ nav {
 #ttt h1 {
   font-size: 4.5rem;
   color: rgba(193, 114, 219, 0.552);
+  margin: auto;
 }
 #ttt h3 {
   font-size: 2rem;
   color: rgba(193, 114, 219, 0.41);
+  margin: auto;
 }
 .ttt-grid {
   display: grid;

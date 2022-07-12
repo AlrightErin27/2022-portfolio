@@ -1,39 +1,54 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 function NavBar() {
+  const [local, setLocal] = useState("home");
+
+  function setHome() {
+    setLocal("home");
+  }
+  function setArcade() {
+    setLocal("arcade");
+  }
+  function setResume() {
+    setLocal("resume");
+  }
+  console.log(local, "🎤");
+
   return (
     <nav>
-      <NavLink
-        to="/home"
-        style={{ textDecoration: "none" }}
-        className="nav-link"
-      >
-        Home
-      </NavLink>
+      {local === "home" ? null : (
+        <NavLink
+          to="/home"
+          style={{ textDecoration: "none" }}
+          className="nav-link"
+          onClick={setHome}
+        >
+          Home
+        </NavLink>
+      )}
 
-      {/* <NavLink
-        to="/projects"
-        style={{ textDecoration: "none" }}
-        className="nav-link"
-      >
-        Projects
-      </NavLink> */}
+      {local === "arcade" ? null : (
+        <NavLink
+          to="/arcade"
+          style={{ textDecoration: "none" }}
+          className="nav-link"
+          onClick={setArcade}
+        >
+          Arcade
+        </NavLink>
+      )}
 
-      <NavLink
-        to="/arcade"
-        style={{ textDecoration: "none" }}
-        className="nav-link"
-      >
-        Arcade
-      </NavLink>
-
-      <NavLink
-        to="/resume"
-        style={{ textDecoration: "none" }}
-        className="nav-link"
-      >
-        Resume
-      </NavLink>
+      {local === "resume" ? null : (
+        <NavLink
+          to="/resume"
+          style={{ textDecoration: "none" }}
+          className="nav-link"
+          onClick={setResume}
+        >
+          Resume
+        </NavLink>
+      )}
     </nav>
   );
 }
