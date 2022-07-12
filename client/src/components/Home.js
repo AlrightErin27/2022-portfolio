@@ -44,7 +44,6 @@ function Home() {
             <li>Validations | </li>
             <li>Heroku Deployment | </li>
             <li>Github | </li>
-            <li>Bye-bug Debugger</li>
           </ul>
         </div>
       </div>
