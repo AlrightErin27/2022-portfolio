@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import Instructions from "./Instructions";
+
 import bird0 from "../../game-imgs/bird-game/eagle-owl.png";
 import bird1 from "../../game-imgs/bird-game/falco-vespertinus.png";
 import bird2 from "../../game-imgs/bird-game/great-cormorant.png";
@@ -8,11 +11,13 @@ import bird5 from "../../game-imgs/bird-game/yellow-oriole.png";
 import bird6 from "../../game-imgs/bird-game/bohemian-waxing-bird.png";
 import bird7 from "../../game-imgs/bird-game/spotted-woodpecker.png";
 
-export default function App() {
+export default function Birding({ user }) {
   const [birds, setBirds] = useState([]);
+  const [playing, setPlaying] = useState(false);
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [timer, setTimer] = useState();
+  const history = useHistory();
 
   const generateIndex = () => {
     setIndex(Math.floor(Math.random() * 6));
@@ -21,6 +26,7 @@ export default function App() {
   const startGame = () => {
     const timer = setInterval(generateIndex, 2000);
     setTimer(timer);
+    setPlaying(true);
 
     const mixBirds = [
       {
@@ -68,7 +74,12 @@ export default function App() {
     setScore(0);
     setIndex(0);
     setBirds([]);
+    setPlaying(false);
   };
+
+  function goToArcade() {
+    history.push("/arcade");
+  }
 
   const onClick = (n) => {
     if (index === n) {
@@ -101,38 +112,39 @@ export default function App() {
           }
       `}
       </style>
-      <button onClick={startGame}>start game</button>
-      <button onClick={endGame}>end game</button>
-      <p>score: {score}</p>
-      <div>
-        {Array(6)
-          .fill()
-          .map((_, n) => {
-            if (index === n) {
-              return (
-                <div className="container">
-                  {birds.length > 0 ? (
-                    <img
-                      src={
-                        birds[Math.floor(Math.random() * (7 - 1 + 1) + 1)].img
-                      }
-                      alt="bird"
-                      onClick={() => onClick(n)}
-                    />
-                  ) : (
-                    <></>
-                  )}
-                </div>
-              );
-            } else {
-              return (
-                <div className="container">
-                  <div className="hole"></div>
-                </div>
-              );
-            }
-          })}
+      {!playing ? <Instructions user={user} /> : null}
+      <div className="b-btn-cont">
+        <button onClick={startGame}>start game</button>
+        <button onClick={endGame}>end game</button>
+        <button onClick={goToArcade}>back</button>
+        <p>score: {score}</p>
       </div>
+
+      {Array(6)
+        .fill()
+        .map((_, n) => {
+          if (index === n) {
+            return (
+              <div className="container">
+                {birds.length > 0 ? (
+                  <img
+                    src={birds[Math.floor(Math.random() * (7 - 1 + 1) + 1)].img}
+                    alt="bird"
+                    onClick={() => onClick(n)}
+                  />
+                ) : (
+                  <></>
+                )}
+              </div>
+            );
+          } else {
+            return (
+              <div className="container">
+                <div className="hole"></div>
+              </div>
+            );
+          }
+        })}
     </div>
   );
 }

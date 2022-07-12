@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 
-function TicTacToe({ userName = "tempUser" }) {
+function TicTacToe({ user }) {
   const [playerX, setPlayerX] = useState(true);
   const [count, setCount] = useState(9);
   const [isOver, setIsOver] = useState(false);
@@ -107,11 +107,13 @@ function TicTacToe({ userName = "tempUser" }) {
 
   return (
     <div id="ttt" className="back">
-      <button onClick={handleBack}>Back</button>
+      <button onClick={handleBack} className="ttt-back-btn">
+        Back
+      </button>
       <h1>Tic Tac Toe</h1>
       <h3>User plays as X.</h3>
       <p>
-        {userName} / X Score: {xScore}
+        {user.name} / X Score: {xScore}
         <br />O Score: {oScore}
       </p>
       <div className="ttt-grid">

@@ -235,28 +235,102 @@ nav {
   font-weight: bold;
 }
 /* ~~~~~~~~~~~~~~🎲~~~~~   GAMES   ~~~~~🎲~~~~~~~~~~~~~~ */
-.ag-btn-cont {
+.ag-cont {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 3rem;
-  column-gap: 3rem;
 }
-
+.ag-hello {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  background-color: transparent;
+}
+.ag-hello p {
+  font-family: "Rock Salt", cursive;
+  font-size: 2rem;
+  padding-left: 15px;
+}
+.ag-user-info {
+  position: fixed;
+  left: 1rem;
+  top: 3rem;
+  background: rgba(255, 85, 0, 0.672);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+}
+.ag-user-info p {
+  background-color: transparent;
+}
+.ag-games-cont {
+  text-align: center;
+}
+.ag-games-cont p {
+  margin: 1rem 0 -1rem 0;
+}
+.ag-game-btns {
+  display: flex;
+  padding: 4rem;
+  gap: 3rem;
+  flex-direction: column;
+}
+#birding-btn {
+  background-color: rgba(0, 0, 255, 0.073);
+}
+#birding-btn:hover {
+  filter: invert(1);
+}
+#watcher {
+  height: 10rem;
+  position: relative;
+  left: -70px;
+  bottom: -15px;
+  background-color: transparent;
+}
+#dove {
+  height: 6rem;
+  background-color: transparent;
+  position: relative;
+  top: -70px;
+}
+#ttt-btn {
+  background-color: rgba(255, 255, 255, 0.873);
+}
+#ttt-btn:hover {
+  filter: invert(1);
+}
+#ttt-icon {
+  background-color: transparent;
+  height: 10rem;
+  filter: grayscale(100%);
+}
+.user-info-cont {
+  background-color: rgba(255, 255, 255, 0.073);
+  outline: black 1px solid;
+  border-radius: 12px;
+  text-align: left;
+  padding: 0 12px 5px 12px;
+  margin-bottom: 12px;
+}
+.user-info-cont h1 {
+  text-align: center;
+  background-color: transparent;
+  color: rgb(0, 0, 94);
+}
 /* ~~~~~~~~~~~~~~~~~~~~~  BIRDING  ~~~~~~~~~~~~~~~~~~~~~ */
 .birding {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.b-header {
-  position: absolute;
-  left: 2rem;
+.b-btn-cont {
+  display: flex;
+  flex-direction: column;
+  width: 8rem;
 }
-.b-header p {
-  margin: 0 2rem 0 2rem;
-}
-.grid {
+/* .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -264,39 +338,52 @@ nav {
   grid-template-areas:
     ". . . ."
     ". . . .";
-}
-.square {
+} */
+/* .square {
   border: white 1px solid;
   width: 14.5rem;
   height: 19rem;
-}
+} */
 .bird-img {
   max-width: 10%;
 }
 
-.cover {
-  width: 14.5rem;
-  height: 19rem;
-  background-color: black;
-  z-index: 999;
-}
 /* BIRDING INSTRUCTIONS  */
 .in-cont {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 5rem;
+  /* flex-direction: column; */
+}
+.in-cont p {
+  font-family: "Rock Salt", cursive;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+.in-img-cont {
+  background-color: rgba(255, 255, 255, 0.103);
+  display: flex;
+  position: relative;
+  right: 23%;
+  top: 315%;
+  height: 27rem;
+  width: 45rem;
+  border-radius: 12px;
 }
 #in-watcher {
   position: fixed;
-  right: 73%;
-  bottom: -4%;
+  right: 61%;
+  bottom: 4.5%;
+  height: 22rem;
+  width: 24rem;
+  background: transparent;
 }
 #in-dove {
-  height: 18%;
+  height: 10rem;
   position: absolute;
   left: 40rem;
-  top: 10rem;
+  top: 1rem;
   background: transparent;
 }
 /* TIC TAC TOE */
@@ -307,7 +394,7 @@ nav {
   font-family: "Poiret One", cursive;
 }
 #ttt h1 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   color: rgba(193, 114, 219, 0.552);
   margin: auto;
 }
@@ -334,6 +421,9 @@ nav {
 }
 .ttt-square:hover {
   background-color: rgba(184, 166, 214, 0.215);
+}
+.ttt-back-btn {
+  margin-top: 2rem;
 }
 .ttt-btn {
   background-image: linear-gradient(

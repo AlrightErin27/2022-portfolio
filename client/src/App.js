@@ -87,7 +87,7 @@ function App() {
 
           {/*  // ~~~🫐 Route to GAME: TicTacToe 🫐~~~ //  */}
           <Route path="/tic-tac-toe">
-            <TicTacToe userName={userName} />
+            <TicTacToe user={user} />
           </Route>
           {""}
         </Switch>
