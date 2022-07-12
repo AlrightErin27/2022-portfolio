@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "dateformat": "^5.0.3",
     "gsap": "^3.10.4",
     "radium": "^0.26.2",
     "react": "^17.0.2",
