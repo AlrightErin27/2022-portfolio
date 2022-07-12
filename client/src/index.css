@@ -319,6 +319,13 @@ nav {
   background-color: transparent;
   color: rgb(0, 0, 94);
 }
+.show-sp {
+  background-color: transparent;
+}
+.ui-score-txt {
+  background-color: transparent;
+  height: 4rem;
+}
 /* ~~~~~~~~~~~~~~~~~~~~~  BIRDING  ~~~~~~~~~~~~~~~~~~~~~ */
 .birding {
   display: flex;
@@ -330,20 +337,7 @@ nav {
   flex-direction: column;
   width: 8rem;
 }
-/* .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px 0px 0px;
-  grid-template-areas:
-    ". . . ."
-    ". . . .";
-} */
-/* .square {
-  border: white 1px solid;
-  width: 14.5rem;
-  height: 19rem;
-} */
+
 .bird-img {
   max-width: 10%;
 }
@@ -374,7 +368,7 @@ nav {
 #in-watcher {
   position: fixed;
   right: 61%;
-  bottom: 4.5%;
+  bottom: 24%;
   height: 22rem;
   width: 24rem;
   background: transparent;

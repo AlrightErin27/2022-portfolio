@@ -15,7 +15,6 @@ import TicTacToe from "./components/Tic-tac-toe/TicTacToe";
 
 function App() {
   const [user, setUser] = useState();
-  const [userName, setUserName] = useState("");
 
   // FETCH GET /me FROM SESSION CONTROLLER
   useEffect(() => {
@@ -34,7 +33,7 @@ function App() {
   }, []);
 
   user
-    ? console.log("CURRENTLY LOGGED IN:", user.name) && setUserName(user.name)
+    ? console.log("CURRENTLY LOGGED IN:", user.name)
     : console.log("Not logged in.");
 
   return (

@@ -17,6 +17,7 @@ export default function Birding({ user }) {
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [timer, setTimer] = useState();
+  const [collected, setCollected] = useState([]);
   const history = useHistory();
 
   const generateIndex = () => {
@@ -27,6 +28,7 @@ export default function Birding({ user }) {
     const timer = setInterval(generateIndex, 2000);
     setTimer(timer);
     setPlaying(true);
+    setScore(0);
 
     const mixBirds = [
       {
@@ -68,13 +70,55 @@ export default function Birding({ user }) {
 
     setBirds(mixBirds);
   };
+  function handleClicked(n) {
+    let text = n.target.src;
+    text = text.substring(0, text.length - 13);
+    text = text.substring(35);
+    text = text.replace(/-/g, " ");
+    const words = text.split(" ");
+
+    for (let i = 0; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    }
+
+    let spBird = words.join(" ");
+
+    setCollected([...collected, spBird]);
+    setScore(score + 1);
+  }
 
   const endGame = () => {
     clearInterval(timer);
-    setScore(0);
     setIndex(0);
     setBirds([]);
     setPlaying(false);
+
+    const scoreTxt = collected.toString();
+
+    let data = {
+      user_id: user.id,
+      game_id: 14,
+      result: score,
+      score_text: scoreTxt,
+    };
+    // ----------- FETCH AREA -------------- //
+    fetch("/scores", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        console.log("Successfully added score:", data);
+        history.push("/arcade");
+      })
+      .catch((error) => {
+        console.error("Error adding new score:", error);
+      });
+
+    // ------------ FETCH AREA ------------ //
   };
 
   function goToArcade() {
@@ -127,11 +171,16 @@ export default function Birding({ user }) {
             return (
               <div className="container">
                 {birds.length > 0 ? (
-                  <img
-                    src={birds[Math.floor(Math.random() * (7 - 1 + 1) + 1)].img}
-                    alt="bird"
-                    onClick={() => onClick(n)}
-                  />
+                  <>
+                    <img
+                      src={
+                        birds[Math.floor(Math.random() * (7 - 1 + 1) + 1)].img
+                      }
+                      alt="bird"
+                      // onClick={() => onClick(n)}
+                      onClick={handleClicked}
+                    />
+                  </>
                 ) : (
                   <></>
                 )}

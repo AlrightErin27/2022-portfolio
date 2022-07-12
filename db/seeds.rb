@@ -37,11 +37,11 @@ bw =
 ttt = Game.create!(title: 'Tic Tac Toe', desc: 'Tic Tac Toe for 2 players.')
 
 pp 'Planting score seeds...'
-Score.create!(user_id: mel.id, game_id: jp.id, result: 100)
-Score.create!(user_id: josie.id, game_id: jp.id, result: 0)
-Score.create!(user_id: val.id, game_id: bw.id, result: 7)
-Score.create!(user_id: mel.id, game_id: bw.id, result: 4)
-Score.create!(user_id: erin.id, game_id: bw.id, result: 7)
-Score.create!(user_id: erin.id, game_id: ttt.id, result: 4)
+Score.create!(user_id: mel.id, game_id: jp.id, result: 100, score_text: 'n/a')
+Score.create!(user_id: josie.id, game_id: jp.id, result: 0, score_text: 'n/a')
+Score.create!(user_id: val.id, game_id: bw.id, result: 7, score_text: 'birds')
+Score.create!(user_id: mel.id, game_id: bw.id, result: 4, score_text: 'birds')
+Score.create!(user_id: erin.id, game_id: bw.id, result: 7, score_text: 'birds')
+Score.create!(user_id: erin.id, game_id: ttt.id, result: 4, score_text: 'win')
 
 pp 'All done!'
