@@ -325,14 +325,12 @@ nav {
   flex-direction: column;
   align-items: center;
 }
-.b-header {
-  position: absolute;
-  left: 2rem;
+.b-btn-cont {
+  display: flex;
+  flex-direction: column;
+  width: 8rem;
 }
-.b-header p {
-  margin: 0 2rem 0 2rem;
-}
-.grid {
+/* .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -340,39 +338,52 @@ nav {
   grid-template-areas:
     ". . . ."
     ". . . .";
-}
-.square {
+} */
+/* .square {
   border: white 1px solid;
   width: 14.5rem;
   height: 19rem;
-}
+} */
 .bird-img {
   max-width: 10%;
 }
 
-.cover {
-  width: 14.5rem;
-  height: 19rem;
-  background-color: black;
-  z-index: 999;
-}
 /* BIRDING INSTRUCTIONS  */
 .in-cont {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 5rem;
+  /* flex-direction: column; */
+}
+.in-cont p {
+  font-family: "Rock Salt", cursive;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+.in-img-cont {
+  background-color: rgba(255, 255, 255, 0.103);
+  display: flex;
+  position: relative;
+  right: 23%;
+  top: 315%;
+  height: 27rem;
+  width: 45rem;
+  border-radius: 12px;
 }
 #in-watcher {
   position: fixed;
-  right: 73%;
-  bottom: -4%;
+  right: 61%;
+  bottom: 4.5%;
+  height: 22rem;
+  width: 24rem;
+  background: transparent;
 }
 #in-dove {
-  height: 18%;
+  height: 10rem;
   position: absolute;
   left: 40rem;
-  top: 10rem;
+  top: 1rem;
   background: transparent;
 }
 /* TIC TAC TOE */
@@ -383,7 +394,7 @@ nav {
   font-family: "Poiret One", cursive;
 }
 #ttt h1 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   color: rgba(193, 114, 219, 0.552);
   margin: auto;
 }
@@ -410,6 +421,9 @@ nav {
 }
 .ttt-square:hover {
   background-color: rgba(184, 166, 214, 0.215);
+}
+.ttt-back-btn {
+  margin-top: 2rem;
 }
 .ttt-btn {
   background-image: linear-gradient(
