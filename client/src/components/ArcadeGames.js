@@ -7,7 +7,6 @@ import TicIcon from "../game-imgs/tictactoe/ttticon.png";
 
 function ArcadeGames({ user, setUser }) {
   const [scores, setScores] = useState([]);
-
   const history = useHistory();
 
   // ------------ FETCH AREA ------------ //
@@ -22,7 +21,6 @@ function ArcadeGames({ user, setUser }) {
       .then(setScores)
       .catch((err) => console.log("💀 GET INDEX SCORES", err));
   }, []);
-  // console.log("SCORES:", scores);
 
   function handleBirding() {
     history.push("/birding");
@@ -37,6 +35,8 @@ function ArcadeGames({ user, setUser }) {
   const renderUsersInfo = scores.map((score, idx) => {
     if (score.user_id === user.id) {
       return <UserInfo key={idx} user={user} score={score} />;
+    } else {
+      return null;
     }
   });
 

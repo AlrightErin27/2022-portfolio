@@ -3,6 +3,7 @@ import dateFormat from "dateformat";
 
 function UserInfo({ user, score }) {
   const [games, setGames] = useState([]);
+
   // ------------ FETCH AREA ------------ //
   useEffect(() => {
     fetch("/games", {
@@ -15,22 +16,23 @@ function UserInfo({ user, score }) {
       .then(setGames)
       .catch((err) => console.log("💀 GET INDEX GAMES", err));
   }, []);
-  //   console.log("GAMES:", games);
-  //   console.log("SCORE:", score);
 
   const renderGameTitle = games.map((game, idx) => {
     if (score.game_id === game.id) {
       return (
-        <>
+        <div key={idx} className="ui-score-txt">
           <h1>{game.title}</h1>
+
           {game.title === "Tic Tac Toe" ? (
             <p>Wins: {score.result}</p>
           ) : (
-            <p>Birds Caught: {score.result}</p>
+            <div className="birds-caught">Birds Caught: {score.result} </div>
           )}
           <p>{dateFormat(score.created_at)}</p>
-        </>
+        </div>
       );
+    } else {
+      return null;
     }
   });
 

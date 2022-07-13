@@ -102,6 +102,31 @@ function TicTacToe({ user }) {
   }
 
   function handleBack() {
+    let data = {
+      user_id: user.id,
+      game_id: 24,
+      result: xScore,
+      score_text: "n/a",
+    };
+
+    // ----------- FETCH AREA -------------- //
+    fetch("/scores", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        console.log("Successfully added score:", data);
+        history.push("/arcade");
+      })
+      .catch((error) => {
+        console.error("Error adding new score:", error);
+      });
+
+    // ------------ FETCH AREA ------------ //
     history.push("./arcade");
   }
 
