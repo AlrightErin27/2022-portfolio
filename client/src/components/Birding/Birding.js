@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Instructions from "./Instructions";
 
@@ -93,14 +93,16 @@ export default function Birding({ user }) {
     setBirds([]);
     setPlaying(false);
 
-    const scoreTxt = collected.toString();
+    // console.log(collected);
+    // console.log(String(collected));
 
     let data = {
       user_id: user.id,
-      game_id: 14,
+      game_id: 23,
       result: score,
-      score_text: scoreTxt,
+      score_text: String(collected),
     };
+
     // ----------- FETCH AREA -------------- //
     fetch("/scores", {
       method: "POST",
@@ -144,8 +146,7 @@ export default function Birding({ user }) {
         }
         img {
           width: 10rem;
-  
-        animation: fadeinout .5s linear 1 forwards;
+          animation: fadeinout .5s linear 1 forwards;
         }
 
         }

@@ -296,7 +296,7 @@ nav {
   top: -70px;
 }
 #ttt-btn {
-  background-color: rgba(255, 255, 255, 0.873);
+  background-color: rgba(255, 255, 255, 0.82);
 }
 #ttt-btn:hover {
   filter: invert(1);
@@ -313,6 +313,10 @@ nav {
   text-align: left;
   padding: 0 12px 5px 12px;
   margin-bottom: 12px;
+  height: 7rem;
+}
+.birds-caught {
+  background-color: transparent;
 }
 .user-info-cont h1 {
   text-align: center;
@@ -324,7 +328,7 @@ nav {
 }
 .ui-score-txt {
   background-color: transparent;
-  height: 4rem;
+  height: 2rem;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~  BIRDING  ~~~~~~~~~~~~~~~~~~~~~ */
 .birding {

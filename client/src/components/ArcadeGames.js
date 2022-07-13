@@ -35,6 +35,8 @@ function ArcadeGames({ user, setUser }) {
   const renderUsersInfo = scores.map((score, idx) => {
     if (score.user_id === user.id) {
       return <UserInfo key={idx} user={user} score={score} />;
+    } else {
+      return null;
     }
   });
 
