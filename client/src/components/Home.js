@@ -38,7 +38,7 @@ function Home() {
             <li>HTML | </li>
             <li>JSX | </li>
             <li>JSON API | </li>
-            <li>Authorization / Bcrypt | </li>
+            <li>Authorization | </li>
             <li>MVC Architecture | </li>
             <li>Redux | </li>
             <li>PostgresSQL DB | </li>
