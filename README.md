@@ -27,8 +27,9 @@ Technologies Used: React.js, Ruby, Javascript, Rails, RESTful Routing, React-rou
 
 ![schema](/client/public/schema.jpg)
 
-## <u><center>Wire Frames</center></u>
-
 ## <u><center>Stretch Goals</center></u>
+
+1. Tune up Bird Games
+2. Add previous projects.
 
 - 2 Games (one that is win/lose, one that allows you to create art)

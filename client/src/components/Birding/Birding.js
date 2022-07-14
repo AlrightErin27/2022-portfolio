@@ -78,12 +78,12 @@ export default function Birding({ user }) {
     const words = text.split(" ");
 
     for (let i = 0; i < words.length; i++) {
-      words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+      words[i] = words[i][0].toUpperCase() + words[i].substr(1) + " ";
     }
 
     let spBird = words.join(" ");
 
-    setCollected([...collected, spBird]);
+    setCollected([...collected, "*" + spBird]);
     setScore(score + 1);
   }
 
@@ -93,12 +93,9 @@ export default function Birding({ user }) {
     setBirds([]);
     setPlaying(false);
 
-    // console.log(collected);
-    // console.log(String(collected));
-
     let data = {
       user_id: user.id,
-      game_id: 23,
+      game_id: 26,
       result: score,
       score_text: String(collected),
     };
@@ -195,6 +192,7 @@ export default function Birding({ user }) {
             );
           }
         })}
+      <p className="collected">Collected: {collected}</p>
     </div>
   );
 }

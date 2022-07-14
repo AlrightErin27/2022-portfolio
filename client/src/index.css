@@ -276,12 +276,23 @@ nav {
   gap: 3rem;
   flex-direction: column;
 }
+#castle-link {
+  height: 9rem;
+  background-image: url("./game-imgs/castle.png");
+  background-size: 100%;
+  filter: grayscale(40%);
+  border: 2px black solid;
+}
+#castle-link:hover {
+  filter: invert(1);
+}
 #birding-btn {
   background-color: rgba(0, 0, 255, 0.073);
 }
 #birding-btn:hover {
   filter: invert(1);
 }
+
 #watcher {
   height: 10rem;
   position: relative;
@@ -317,6 +328,10 @@ nav {
 }
 .birds-caught {
   background-color: transparent;
+}
+.collected {
+  position: absolute;
+  bottom: 10rem;
 }
 .user-info-cont h1 {
   text-align: center;
@@ -423,6 +438,7 @@ nav {
 .ttt-back-btn {
   margin-top: 2rem;
 }
+
 .ttt-btn {
   background-image: linear-gradient(
     92.88deg,

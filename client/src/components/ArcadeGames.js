@@ -61,7 +61,11 @@ function ArcadeGames({ user, setUser }) {
             <img src={TicIcon} alt="tictactoe-icon" id="ttt-icon" />
           </button>
 
-          <a href="https://castles-fi.herokuapp.com/login" target="_blank">
+          <a
+            href="https://castles-fi.herokuapp.com/login"
+            target="_blank"
+            id="castle-link"
+          >
             Castle Shop
           </a>
         </div>
