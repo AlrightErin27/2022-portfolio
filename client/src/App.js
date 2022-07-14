@@ -85,13 +85,19 @@ function App() {
           </Route>
           {""}
 
+          {/*  // ~~~🍏 Route to Past Projects 🍏~~~ //  */}
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          {""}
+
           {/*  // ~~~🫐 Route to GAME: Birding 🫐~~~ //  */}
           <Route path="/birding">
             <Birding user={user} />
           </Route>
           {""}
 
-          {/*  // ~~~🫐 Route to GAME: TicTacToe 🫐~~~ //  */}
+          {/*  // ~~~🍐 Route to GAME: TicTacToe 🍐~~~ //  */}
           <Route path="/tic-tac-toe">
             <TicTacToe user={user} />
           </Route>

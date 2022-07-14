@@ -32,7 +32,8 @@ function LoginForm({ handleForms, setIsNew, setUser }) {
         });
       } else {
         res.json().then((json) => setError(json.error, error));
-        alert("Incorrect Input");
+
+        alert(error.login);
       }
     });
     // -------------- FETCH ------------ //

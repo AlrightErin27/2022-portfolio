@@ -104,7 +104,7 @@ function TicTacToe({ user }) {
   function handleBack() {
     let data = {
       user_id: user.id,
-      game_id: 27,
+      game_id: 30,
       result: xScore,
       score_text: "n/a",
     };

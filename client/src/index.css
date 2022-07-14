@@ -71,7 +71,9 @@ label {
 .rotate {
   animation: rotation 20s;
   background-color: transparent;
+  cursor: pointer;
 }
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -276,23 +278,13 @@ nav {
   gap: 3rem;
   flex-direction: column;
 }
-#castle-link {
-  height: 9rem;
-  background-image: url("./game-imgs/castle.png");
-  background-size: 100%;
-  filter: grayscale(40%);
-  border: 2px black solid;
-}
-#castle-link:hover {
-  filter: invert(1);
-}
 #birding-btn {
   background-color: rgba(0, 0, 255, 0.073);
+  cursor: url(./game-imgs/bird-game/binoculars.png), auto;
 }
 #birding-btn:hover {
   filter: invert(1);
 }
-
 #watcher {
   height: 10rem;
   position: relative;
@@ -308,6 +300,7 @@ nav {
 }
 #ttt-btn {
   background-color: rgba(255, 255, 255, 0.82);
+  cursor: url(./game-imgs/pen1.png), auto;
 }
 #ttt-btn:hover {
   filter: invert(1);
@@ -346,6 +339,9 @@ nav {
   height: 2rem;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~  BIRDING  ~~~~~~~~~~~~~~~~~~~~~ */
+.birding-cont {
+  cursor: url(./game-imgs/bird-game/binoculars.png), auto;
+}
 .birding {
   display: flex;
   flex-direction: column;
@@ -356,7 +352,6 @@ nav {
   flex-direction: column;
   width: 8rem;
 }
-
 .bird-img {
   max-width: 10%;
 }
@@ -472,4 +467,21 @@ nav {
   outline: black solid 1px;
   height: 30rem;
   width: 70rem;
+}
+/* PROJECTS PAGE */
+.projects-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#castle-link {
+  height: 9rem;
+  width: 20rem;
+  background-image: url("./game-imgs/castle.png");
+  background-size: 100%;
+  filter: grayscale(40%);
+  border: 2px black solid;
+}
+#castle-link:hover {
+  filter: blur(5px);
 }

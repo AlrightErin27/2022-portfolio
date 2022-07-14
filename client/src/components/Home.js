@@ -1,7 +1,8 @@
-import React from "react";
+import { useHistory } from "react-router-dom";
 import ErinLogo from "../imgs/erinlogo.png";
 
 function Home() {
+  const history = useHistory();
   return (
     <>
       <div className="home">
@@ -18,7 +19,7 @@ function Home() {
         </p>
 
         <div className="h-lower-pg">
-          <div className="h-logo-cont">
+          <div className="h-logo-cont" onClick={console.log("clicked")}>
             <img
               src={ErinLogo}
               alt="EVB logo"
@@ -37,7 +38,7 @@ function Home() {
             <li>HTML | </li>
             <li>JSX | </li>
             <li>JSON API | </li>
-            <li>Authorization / Bcrypt | </li>
+            <li>Authorization | </li>
             <li>MVC Architecture | </li>
             <li>Redux | </li>
             <li>PostgresSQL DB | </li>

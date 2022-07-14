@@ -13,6 +13,9 @@ function NavBar() {
   function setResume() {
     setLocal("resume");
   }
+  function setProjects() {
+    setLocal("projects");
+  }
   console.log(local, "🎤");
 
   return (
@@ -47,6 +50,17 @@ function NavBar() {
           onClick={setResume}
         >
           Resume
+        </NavLink>
+      )}
+
+      {local === "projects" ? null : (
+        <NavLink
+          to="/projects"
+          style={{ textDecoration: "none" }}
+          className="nav-link"
+          onClick={setProjects}
+        >
+          Past Projects
         </NavLink>
       )}
     </nav>
