@@ -16,6 +16,7 @@ import Projects from "./components/Projects";
 import Logout from "./components/Logout";
 import Birding from "./components/Birding/Birding";
 import TicTacToe from "./components/Tic-tac-toe/TicTacToe";
+
 // ~~~~⭐️~~~~~~~~~~🌜~~~~ 🌞 ~~~~~~~~~~ 🌞 ~~~~🌛~~~~~~~~~~⭐️~~~~ //
 
 function App() {
@@ -96,7 +97,7 @@ function App() {
           {""}
         </Switch>
 
-        <Redirect to="/home" />
+        {/* <Redirect to="/home" /> */}
       </Router>
     </>
   );

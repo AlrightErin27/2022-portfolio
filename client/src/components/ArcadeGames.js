@@ -60,6 +60,10 @@ function ArcadeGames({ user, setUser }) {
           <button onClick={handleTTT} id="ttt-btn">
             <img src={TicIcon} alt="tictactoe-icon" id="ttt-icon" />
           </button>
+
+          <a href="https://castles-fi.herokuapp.com/login" target="_blank">
+            Castle Shop
+          </a>
         </div>
       </div>
     </div>

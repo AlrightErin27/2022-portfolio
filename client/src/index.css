@@ -446,3 +446,14 @@ nav {
   font-family: "Poiret One", cursive;
   font-size: 3rem;
 }
+/* SLEEP GAME */
+.sleep-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.canvas {
+  outline: black solid 1px;
+  height: 30rem;
+  width: 70rem;
+}
