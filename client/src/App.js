@@ -46,6 +46,7 @@ function App() {
     <>
       <Router>
         <NavBar />
+
         <Switch>
           {""}
           {/*  // ~~~🍏 Route to Login 🍏~~~ //  */}
@@ -97,7 +98,7 @@ function App() {
           {""}
         </Switch>
 
-        {/* <Redirect to="/home" /> */}
+        <Redirect to="/home" />
       </Router>
     </>
   );
