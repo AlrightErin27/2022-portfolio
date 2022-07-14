@@ -1,11 +1,15 @@
 import React from "react";
-import NavBar from "./NavBar";
 
 function Projects() {
   return (
-    <div>
-      <NavBar />
-      Projects
+    <div className="projects-cont">
+      <div className="ag-game-btns">
+        <a
+          href="https://castles-fi.herokuapp.com/login"
+          target="_blank"
+          id="castle-link"
+        ></a>
+      </div>
     </div>
   );
 }

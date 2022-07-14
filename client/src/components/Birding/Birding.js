@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Instructions from "./Instructions";
+import Timer from "./Timer";
 
 import bird0 from "../../game-imgs/bird-game/eagle-owl.png";
 import bird1 from "../../game-imgs/bird-game/falco-vespertinus.png";
@@ -83,7 +84,7 @@ export default function Birding({ user }) {
 
     let spBird = words.join(" ");
 
-    setCollected([...collected, "*" + spBird]);
+    setCollected([...collected, spBird]);
     setScore(score + 1);
   }
 
@@ -95,7 +96,7 @@ export default function Birding({ user }) {
 
     let data = {
       user_id: user.id,
-      game_id: 26,
+      game_id: 29,
       result: score,
       score_text: String(collected),
     };
@@ -131,9 +132,10 @@ export default function Birding({ user }) {
   };
 
   return (
-    <div>
-      <style>
-        {`
+    <>
+      <div className="birding-cont">
+        <style>
+          {`
         .hole {
           width: 10rem;
           height: 2rem;
@@ -145,7 +147,6 @@ export default function Birding({ user }) {
           width: 10rem;
           animation: fadeinout .5s linear 1 forwards;
         }
-
         }
         @keyframes fadeinout {
             0% { opacity: 0, z-index: -1 }, 
@@ -153,46 +154,58 @@ export default function Birding({ user }) {
             100% { opacity: 0, z-index: -1 }
           }
       `}
-      </style>
-      {!playing ? <Instructions user={user} /> : null}
-      <div className="b-btn-cont">
-        <button onClick={startGame}>start game</button>
-        <button onClick={endGame}>end game</button>
-        <button onClick={goToArcade}>back</button>
-        <p>score: {score}</p>
-      </div>
+        </style>
+        {!playing ? <Instructions user={user} /> : null}
+        <div className="b-btn-cont">
+          {!playing ? (
+            <button onClick={startGame}>start game</button>
+          ) : (
+            <button onClick={endGame}>end game</button>
+          )}
 
-      {Array(6)
-        .fill()
-        .map((_, n) => {
-          if (index === n) {
-            return (
-              <div className="container">
-                {birds.length > 0 ? (
-                  <>
-                    <img
-                      src={
-                        birds[Math.floor(Math.random() * (7 - 1 + 1) + 1)].img
-                      }
-                      alt="bird"
-                      // onClick={() => onClick(n)}
-                      onClick={handleClicked}
-                    />
-                  </>
-                ) : (
-                  <></>
-                )}
-              </div>
-            );
-          } else {
-            return (
-              <div className="container">
-                <div className="hole"></div>
-              </div>
-            );
-          }
-        })}
-      <p className="collected">Collected: {collected}</p>
-    </div>
+          <button onClick={goToArcade}>back</button>
+          <p>score: {score}</p>
+        </div>
+
+        {Array(6)
+          .fill()
+          .map((_, n) => {
+            if (index === n) {
+              return (
+                <div className="container">
+                  {birds.length > 0 ? (
+                    <>
+                      <img
+                        src={
+                          birds[Math.floor(Math.random() * (7 - 1 + 1) + 1)].img
+                        }
+                        alt="bird"
+                        // onClick={() => onClick(n)}
+                        onClick={handleClicked}
+                      />
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+              );
+            } else {
+              return (
+                <div className="container">
+                  <div className="hole"></div>
+                </div>
+              );
+            }
+          })}
+        {!playing ? null : (
+          <div>
+            <ul>Collected:</ul>
+            {collected.map((birdName, idx) => {
+              return <li key="idx">{birdName}</li>;
+            })}
+          </div>
+        )}
+      </div>
+    </>
   );
 }
